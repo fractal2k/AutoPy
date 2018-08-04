@@ -1,1 +1,1 @@
-# AutoPy
+# Basic web automation project
