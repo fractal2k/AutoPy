@@ -1,5 +1,5 @@
-USERNAME = "suj.rok.rt17@rait.ac.in"
-PASSWORD = "djpatil@123"
+USERNAME = ""
+PASSWORD = ""
 VIEW_ID_MATH = "1519"
 VIEW_ID_DLDA = "1520"
 VIEW_ID_DIS = "1521"
