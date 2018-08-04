@@ -29,7 +29,11 @@ class AutoPyFirefox:
 
     def click_on_shit(self):
         self.login()
-        self.driver.find_element_by_xpath('//*[contains(@aria-label, "Section 1")]').click()
+        num_sections = int(len(self.driver.find_elements_by_xpath('//li[contains(@aria-label, "Section")]')) / 2)
+
+        self.driver.find_element_by_xpath('//li[contains(@aria-label, "Section")]').click()
+        for i in range(num_sections - 1):
+            self.driver.find_element_by_xpath('//*[@id="gridshadebox_right"]').click()
 
 
 auto = AutoPyFirefox(config.USERNAME, config.PASSWORD, config.VIEW_ID_MATH)
