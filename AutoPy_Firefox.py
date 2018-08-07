@@ -46,8 +46,13 @@ class AutoPyFirefox:
 
             self.driver.find_element_by_xpath('//*[@id="gridshadebox_right"]').click()
 
+    def exit(self):
+        self.driver.quit()
+
 
 auto = AutoPyFirefox(config.USERNAME, config.PASSWORD, config.VIEW_ID_MATH)
 auto.click_on_shit()
+auto.exit()
+
 
 
