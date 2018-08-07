@@ -50,9 +50,14 @@ class AutoPyFirefox:
         self.driver.quit()
 
 
-auto = AutoPyFirefox(config.USERNAME, config.PASSWORD, config.VIEW_ID_MATH)
-auto.click_on_shit()
-auto.exit()
+view_id = [config.VIEW_ID_MATH,
+           config.VIEW_ID_DLDA,
+           config.VIEW_ID_DIS,
+           config.VIEW_ID_ECCF,
+           config.VIEW_ID_OOPM,
+           config.VIEW_ID_DS]
 
-
-
+for ID in view_id:
+    auto = AutoPyFirefox(username=config.USERNAME, password=config.PASSWORD, view_id=ID)
+    auto.click_on_shit()
+    auto.exit()
