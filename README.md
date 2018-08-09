@@ -5,3 +5,4 @@ Automates some tasks in Chrome / Firefox, needs [Gecko Driver](https://github.co
 
 ps. I recommend using Firefox, because chromedriver **will** act funny in some cases, and the chrome code is made for personal use (it's shit).
 
+*Jai Shree Ram*
