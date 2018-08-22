@@ -13,7 +13,7 @@ class AutoPyFirefox:
     def __init__(self, username, password, view_id):
         self.username = username
         self.password = password
-        self.url = f"http://mydy.dypatil.edu/rait/login/index.php?uname={username}&wantsurl=http://mydy.dypatil.edu/rait/course/view.php?id={view_id}"
+        self.url = ""       
         self.driver = webdriver.Firefox()
         self.delay = 5
 
@@ -50,12 +50,12 @@ class AutoPyFirefox:
         self.driver.quit()
 
 
-view_id = [config.VIEW_ID_MATH,
-           config.VIEW_ID_DLDA,
-           config.VIEW_ID_DIS,
-           config.VIEW_ID_ECCF,
-           config.VIEW_ID_OOPM,
-           config.VIEW_ID_DS]
+view_id = [config.VIEW_ID_SUB1,
+           config.VIEW_ID_SUB2,
+           config.VIEW_ID_SUB3,
+           config.VIEW_ID_SUB4,
+           config.VIEW_ID_SUB5,
+           config.VIEW_ID_SUB6]
 
 for ID in view_id:
     auto = AutoPyFirefox(username=config.USERNAME, password=config.PASSWORD, view_id=ID)
