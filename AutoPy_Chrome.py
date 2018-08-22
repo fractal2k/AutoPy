@@ -8,7 +8,7 @@ import config
 #Opening browser window for the first time, logging in
 user = config.USERNAME
 chromedriver = "" #put your chromedriver.exe location here
-url = f"http://mydy.dypatil.edu/rait/login/index.php?uname={user}&wantsurl="
+url = ""
 driver = webdriver.Chrome(chromedriver)
 driver.get(url)
 elem = driver.find_element_by_id("password")
@@ -38,7 +38,7 @@ for i in range(len(subjects)):
         for item in temp:
             link = item.find_element_by_xpath('.//a[contains(@href, "http")]')
             ActionChains(driver).key_down(Keys.CONTROL).click(link).key_up(Keys.CONTROL).perform()
-        driver.find_element_by_xpath('//*[contains(@src,"http://mydy.dypatil.edu/rait/theme/image.php/essential/format_grid/1524215314/fa-arrow-circle-right-w")]').click()
+        driver.find_element_by_xpath('//*[contains(@src,"")]').click()
     driver.quit()
 
     #who needs methods when you can copy paste stuff
